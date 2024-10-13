@@ -1,5 +1,5 @@
-using Tyuiu.PopovaAA.Sprint1.Task3.V9.Lib;
-namespace Tyuiu.PopovaAA.Sprint1.Task3.V9.Test
+using Tyuiu.PopovaAA.Sprint1.Task4.V4.Lib;
+namespace Tyuiu.PopovaAA.Sprint1.Task4.V4.Test
 {
     [TestClass]
     public class DataServiceTest
@@ -8,13 +8,11 @@ namespace Tyuiu.PopovaAA.Sprint1.Task3.V9.Test
         public void ValidExpression()
         {
             DataService ds = new DataService();
-            int k = 150;
-            int x = k/60;
-            double wait = 2;
-            int y = k % 60;
-            double wait2 = 30;
-            var res = ds.ConvertMinutesToHours(x+y);
-            Assert.AreEqual(wait+wait2,res);
+            double x = 2;
+            double y = 2;
+            double wait = 1.25;
+            var res = ds.Calculate(x, y);
+            Assert.AreEqual(wait, res);
         }
     }
 }
