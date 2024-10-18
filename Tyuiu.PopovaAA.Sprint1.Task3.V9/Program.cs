@@ -25,17 +25,19 @@ namespace Tyuiu.PopovaAA.Sprint1.Task3.V9
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                          *");
             Console.WriteLine("*****************************************************************************");
 
-            int k = 150;
-            int x = 150/60;
-            int y = 150 % 60;
+            int k, x, y;
+            
 
-            Console.WriteLine("Исходное значение в минутах = " + k);
 
+            Console.WriteLine("Введите исходное значение в минутах: ");
+            k = Convert.ToInt32(Console.ReadLine());
+            x = k / 60;
+            y = k % 60;
             Console.WriteLine("*****************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                                *");
             Console.WriteLine("*****************************************************************************");
 
-            Console.WriteLine("Переведённое время = " + ds.ConvertMinutesToHours(x) + " часа " + ds.ConvertMinutesToHours(y) + " минут ");
+            Console.WriteLine("Переведённое время: " + ds.ConvertMinutesToHours(x) + " часа " + ds.ConvertMinutesToHours(y) + " минут ");
 
 
 
